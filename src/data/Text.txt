@@ -1,0 +1,60 @@
+
+All the required Text for this portfolio
+Fonts
+
+----------------------------------------------
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&family=Pacifico&family=Source+Sans+Pro:wght@400;600;700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+----------------------------------------------
+
+
+Skills
+----------------------------------------------
+I love to create API's that can be easily used by other people and solve the client problem efficiently.
+SKILLS
+Node.js, Solidity, PHP, Laravel,  MongoDb, SQLserver, MySql.
+
+TOOLS
+VScode
+GitHub
+Postman
+
+I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+SKILLS
+Html, Css, JavaScript, React, Next, Redux Toolkit, Redux Ducks, etc.
+
+TOOLS
+VScode, Github, Redux-DevTools etc.
+
+----------------------------------------------
+
+About Text
+
+----------------------------------------------
+I'm a front-end developer located in Colombia. I love to create simple yet beautiful websites with great user experience.
+
+I'm interested in the whole frontend stack Like trying new things and building great projects. I'm also a system administrator. I love to learn and challenge myself.
+
+I believe hard work always pay off. You can connect with me via social links.
+----------------------------------------------
+
+
+Theme
+----------------------------------------------
+    body:"#FCF6F4",
+    text:"#000000",
+    fontFamily:"'Source Sans Pro', sans-serif",
+    bodyRgba : "252, 246, 244",
+    textRgba:"0,0,0",
+
+
+----------------------------------------------
+
+
+
+
+
+
