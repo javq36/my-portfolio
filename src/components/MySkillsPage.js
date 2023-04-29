@@ -107,7 +107,7 @@ const MySkillsPage = () => {
         </Main>
         <Main>
           <Title>
-            <NodeJs width={60} height={40} /> Bakcend Developer
+            <NodeJs width={60} height={40} /> Backend Developer
           </Title>
           <Description>
             I love to create API's that can be easily used by other people and
