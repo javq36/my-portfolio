@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import {DarkTheme} from './Themes';
 import {motion} from 'framer-motion';
@@ -15,25 +15,33 @@ import BigTitlte from '../subComponents/BigTitlte';
 const Box = styled.div`
 background-color: ${props => props.theme.body};
 
-height:400vh;
+height:${props => props.isMobile ? 'auto' : '400vh'};
+min-height: 100vh;
 position: relative;
 display: flex;
 align-items: center;
+padding: ${props => props.isMobile ? '6.5rem 0 2rem 0' : '0'};
 
 
 `
 
 const Main = styled(motion.ul)`
-position: fixed;
-top: 12rem;
-left:calc(10rem + 15vw);
-height: 40vh;
+position: ${props => props.isMobile ? 'relative' : 'fixed'};
+top: ${props => props.isMobile ? 'auto' : '12rem'};
+left:${props => props.isMobile ? 'auto' : 'calc(10rem + 15vw)'};
+height: auto;
 display: flex;
+flex-direction: ${props => props.isMobile ? 'column' : 'row'};
+align-items: flex-start;
+gap: ${props => props.isMobile ? '1rem' : '0'};
+padding: ${props => props.isMobile ? '0.5rem 0' : '0'};
+margin: ${props => props.isMobile ? '0 auto' : '0'};
+list-style: none;
 
 color:white;
 `
 const Rotate = styled.span`
-display:block;
+display:${props => props.isMobile ? 'none' : 'block'};
 position: fixed;
 right:1rem;
 bottom: 1rem;
@@ -63,10 +71,24 @@ const WorkPage = () => {
 
     const ref = useRef(null);
     const yinyang = useRef(null);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 900);
+
+    useEffect(() => {
+      const onResize = () => setIsMobile(window.innerWidth <= 900);
+
+      window.addEventListener('resize', onResize);
+      return () => {
+        window.removeEventListener('resize', onResize);
+      };
+    }, []);
 
 
 
     useEffect(() => {
+        if (isMobile) {
+          return undefined;
+        }
+
         let element = ref.current;
        
         
@@ -84,25 +106,25 @@ const WorkPage = () => {
           window.removeEventListener('scroll', rotate);
           
         }
-      }, [])
+      }, [isMobile])
 
 
     return (
         <ThemeProvider theme={DarkTheme}>
-<Box>
+<Box isMobile={isMobile}>
 
 <LogoComponent theme='dark'/>
 <SocialIcons theme='dark'/>
 <PowerButton />
 
-     <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
+    <Main ref={ref} isMobile={isMobile} variants={container} initial='hidden' animate='show'  >
          {
             Work.map( d => 
             <Card key={d.id} data={d} />
             )
          }
      </Main>
-<Rotate ref={yinyang}>
+<Rotate ref={yinyang} isMobile={isMobile}>
     <YinYang width={120} height={80} fill={DarkTheme.text}/>
 </Rotate>
 

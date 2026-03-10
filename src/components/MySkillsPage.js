@@ -8,15 +8,30 @@ import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
 import BigTitle from "../subComponents/BigTitlte";
+import { profileData } from "../data/ProfileData";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 1.5rem;
+  padding: 6rem 2rem 2rem 5rem;
+
+  @media (max-width: 1100px) {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 7rem 1.25rem 2rem 1.25rem;
+  }
+
+  @media (max-width: 700px) {
+    padding: 6.5rem 0.85rem 1.5rem 0.85rem;
+    gap: 1rem;
+  }
 `;
 
 const Main = styled.div`
@@ -25,7 +40,7 @@ const Main = styled.div`
   background-color: ${(props) => props.theme.body};
   padding: 2rem;
   width: 30vw;
-  height: 60vh;
+  min-height: 60vh;
   z-index: 3;
   line-height: 1.5;
   cursor: pointer;
@@ -34,6 +49,16 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 1100px) {
+    width: min(42rem, 90vw);
+    min-height: auto;
+  }
+
+  @media (max-width: 700px) {
+    width: 94vw;
+    padding: 1.2rem;
+  }
 
   &:hover {
     color: ${(props) => props.theme.body};
@@ -75,6 +100,15 @@ const Description = styled.div`
   p {
     margin-left: 2rem;
   }
+
+  @media (max-width: 700px) {
+    font-size: calc(0.62em + 1.1vw);
+
+    ul,
+    p {
+      margin-left: 0.6rem;
+    }
+  }
 `;
 
 const MySkillsPage = () => {
@@ -89,37 +123,28 @@ const MySkillsPage = () => {
           <Title>
             <Develope width={40} height={40} /> Frontend Developer
           </Title>
-          <Description>
-            I value business or brand for which i'm creating, thus i enjoy
-            bringing new ideas to life.
-          </Description>
+          <Description>{profileData.skills.frontend.summary}</Description>
           <Description>
             <strong>Skills</strong>
-            <p>
-              Html, Css, JavaScript, React, Next, Typescript, Redux Toolkit, Redux Ducks, Wordpress, Shopify,
-              etc.
-            </p>
+            <p>{profileData.skills.frontend.stack}</p>
           </Description>
           <Description>
             <strong>Tools</strong>
-            <p>VScode, Github, Redux-DevTools etc.</p>
+            <p>{profileData.skills.frontend.tools}</p>
           </Description>
         </Main>
         <Main>
           <Title>
-            <NodeJs width={60} height={40} /> Bakcend Developer
+            <NodeJs width={60} height={40} /> Backend Developer
           </Title>
-          <Description>
-            I love to create API's that can be easily used by other people and
-            solve the client problem efficiently.
-          </Description>
+          <Description>{profileData.skills.backend.summary}</Description>
           <Description>
             <strong>Skills</strong>
-            <p>Node.js, Solidity, PHP, Laravel, MongoDb, SQLserver, MySql.</p>
+            <p>{profileData.skills.backend.stack}</p>
           </Description>
           <Description>
             <strong>Tools</strong>
-            <p>VScode, GitHub, Postman.</p>
+            <p>{profileData.skills.backend.tools}</p>
           </Description>
         </Main>
         <BigTitle text="SKILLS" top="80%" right="30%" />

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Me from "../assets/Images/profile-img.png";
+import { profileData } from "../data/ProfileData";
 
 const Box = styled(motion.div)`
   position: absolute;
@@ -13,7 +14,8 @@ const Box = styled(motion.div)`
   height: 55vh;
   display: flex;
 
-  background: linear-gradient(
+  background:
+    linear-gradient(
         to right,
         ${(props) => props.theme.body} 50%,
         ${(props) => props.theme.text} 50%
@@ -74,8 +76,8 @@ const Intro = () => {
       <SubBox>
         <Text>
           <h1>Hi,</h1>
-          <h3>I'm Alexander Villamizar.</h3>
-          <h6>I Code agile, powerfull and beautiful web solutions.</h6>
+          <h3>I'm {profileData.name}</h3>
+          <h6>{profileData.intro}</h6>
         </Text>
       </SubBox>
       <SubBox>

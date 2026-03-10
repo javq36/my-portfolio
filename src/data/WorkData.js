@@ -1,63 +1,78 @@
 // work data
 
 export const Work = [
-    {
-        id:1,
-        name:"Tekbees",
-        description:"We workeded in a few projects called TryME, Prestadero and Unicus. TryMe it's a plataform to sell recipes created by influencers in USA, Prestadero it's a plataform to loan money, and Unicus a plataform to digital identity verifiers.",
-        tags:["React","Node.js","styledComponents", "Next.js", "MongoDb", "MySql", "Redux", "Vue.js" ],
-        
-        demo:"https://tekbees.com/",
-        github:"https://tekbees.com/"
-    },
-    {
-        id:2,
-        name:"Icancha",
-        description:"We worked in a project that help people to reserve Artificial turf in the city of Bogota. The project was called SARI, and it's a plataform to buy and sell artificial turf in Bogota.",
-        tags:["React","Css"],
-        
-        demo:"https://www.icancha.com/",
-        github:"https://www.icancha.com/"
-        
-    },
-    {
-        id:3,
-        name:"AUTOMARCOL",
-        description:"We work here creating an app to help workers in a few things, like: creating suport tickets, checking list of insurance companies that owe spare parts, helps clients to create PQR's.",
-        tags:["Next.js", "Redux Toolkit", "StyledComponents", "Node.js", "MongoDb"],
-        
-        demo:"https://automarcol.com/",
-        github:"https://automarcol.com/"
-    },
-    {
-        id:4,
-        name:"Labco",
-        description:"My first work as developer, we made a system to autoritze people to logging trees in the city of Cucuta. Also manage Websites using Wordpress.",
-        tags:["PHP","Laravel","MySql", "Wordpress"],
-        
-        demo:"https://labco.com.co/",
-        github:"https://labco.com.co/"
-       
-    },{
-        id:5,
-        name:"Viviendas y Valores",
-        description:"Here I made my intership, we made a system that helps RRHH to manage CV's of employees, it store the hole information of a employee in a SQL database.",
-        tags:["PHP","HTML","CSS","MySql"],
-        
-        demo:"https://www.viviendasyvalores.com.co/",
-        github:"https://www.viviendasyvalores.com.co/"
-        
-    },
-    {
-        id:6,
-        name:"Universidad Simón Bolivar",
-        description:"A project that help the university to manage teachers; it's a plataform that store degrees, study programs, courses, and teachers in a SQL database.",
-        tags:["HTML","PHP","css", "MySql"],
-        
-        demo:"https://www.unisimon.edu.co/cucuta/",
-        github:"https://www.unisimon.edu.co/cucuta/"
-        
-    },
-    
-  
-] 
+  {
+    id: 1,
+    name: "Senior Software Developer - Adage Tech (Aug 2022 - Mar 2026)",
+    description:
+      "Built scalable React + TypeScript applications and maintained enterprise .NET APIs. Mentored engineers, designed Node.js REST services, and led technical presentations for C-level stakeholders. Improved CRM segmentation by optimizing Optimizely properties.",
+    tags: [
+      "React",
+      "TypeScript",
+      ".NET APIs",
+      "Node.js",
+      "REST APIs",
+      "Optimizely",
+      "Tech Leadership",
+    ],
+
+    demo: "https://www.adagetech.com/",
+    github: "https://www.adagetech.com/",
+  },
+  {
+    id: 2,
+    name: "Full Stack Developer & Infrastructure Lead - AUTOMARCOL (Apr 2019 - Aug 2022)",
+    description:
+      "Automated CRM workflows with React.js and Node.js, reducing manual processing by 40%. Optimized SQL Server and MongoDB for 99.9% availability and strengthened infrastructure security through auditing and patching.",
+    tags: [
+      "React.js",
+      "Node.js",
+      "SQL Server",
+      "MongoDB",
+      "High Availability",
+      "Security",
+      "Infrastructure",
+    ],
+
+    demo: "https://automarcol.com/",
+    github: "https://automarcol.com/",
+  },
+  {
+    id: 3,
+    name: "Software Developer - Tekbees (Jun 2021 - Aug 2022)",
+    description:
+      "Modernized legacy codebases with React and Node.js, lowering maintenance costs by 30%. Implemented JWT/OAuth security and delivered 10+ scalable web modules in Agile environments ahead of schedule.",
+    tags: [
+      "React",
+      "Node.js",
+      "JWT",
+      "OAuth",
+      "Agile",
+      "Scalability",
+      "Modernization",
+    ],
+
+    demo: "https://tekbees.com/",
+    github: "https://tekbees.com/",
+  },
+  {
+    id: 4,
+    name: "Icancha - SARI Platform",
+    description:
+      "Contributed to a platform focused on artificial turf reservation and sales workflows in Bogota, helping improve the digital customer flow for search, booking, and purchase interactions.",
+    tags: ["React", "CSS", "Web Platform", "Booking Flow"],
+
+    demo: "https://www.icancha.com/",
+    github: "https://www.icancha.com/",
+  },
+  {
+    id: 5,
+    name: "Labco - Software Developer",
+    description:
+      "Built and maintained solutions including a permit management system for logging-tree authorization workflows in Cucuta, and supported corporate web platforms with WordPress administration.",
+    tags: ["PHP", "Laravel", "MySQL", "WordPress"],
+
+    demo: "https://labco.com.co/",
+    github: "https://labco.com.co/",
+  },
+];

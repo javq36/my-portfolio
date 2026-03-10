@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Facebook, Github, LinkedIn } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
+import { profileData } from "../data/ProfileData";
 
 const Icons = styled.div`
   display: flex;
@@ -39,7 +40,7 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://github.com/javq36" }}
+          to={{ pathname: profileData.social.github }}
         >
           <Github
             width={25}
@@ -56,10 +57,7 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{
-            pathname:
-              "https://www.linkedin.com/in/alexander-villamizar-quñonez-8287651a3",
-          }}
+          to={{ pathname: profileData.social.linkedin }}
         >
           <LinkedIn
             width={25}
@@ -76,7 +74,7 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://web.facebook.com/alexander.villamizar.37/" }}
+          to={{ pathname: profileData.social.facebook }}
         >
           <Facebook
             width={25}

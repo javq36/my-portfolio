@@ -8,6 +8,7 @@ import PowerButton from "../subComponents/PowerButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
 import BigTitle from "../subComponents/BigTitlte";
 import astronaut from "../assets/Images/spaceman.png";
+import { profileData } from "../data/ProfileData";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -32,6 +33,16 @@ const Spaceman = styled.div`
     width: 100%;
     height: auto;
   }
+
+  @media (max-width: 900px) {
+    width: 28vw;
+    right: 2%;
+    top: 6%;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
@@ -41,17 +52,42 @@ const Main = styled.div`
   height: 60vh;
   z-index: 3;
   line-height: 1.5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   font-size: calc(0.6rem + 1vw);
   backdrop-filter: blur(4px);
+  overflow-y: auto;
 
   position: absolute;
   left: calc(5rem + 5vw);
   top: 10rem;
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
+
+  ul {
+    margin-top: 0.75rem;
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 0.35rem;
+  }
+
+  @media (max-width: 1100px) {
+    width: 70vw;
+    left: 12vw;
+    top: 8rem;
+    height: 66vh;
+  }
+
+  @media (max-width: 700px) {
+    width: 88vw;
+    left: 6vw;
+    top: 7rem;
+    height: 74vh;
+    padding: 1.25rem;
+    font-size: calc(0.65rem + 1.2vw);
+    line-height: 1.45;
+  }
 `;
 
 const AboutPage = () => {
@@ -67,14 +103,18 @@ const AboutPage = () => {
           <img src={astronaut} alt="spaceman" />
         </Spaceman>
         <Main>
-          I'm a front-end developer located in Colombia. I love to create agile,
-          powerfull and yet beautiful web solutions with great user experience.
-          <br /> <br />
-          I'm interested in the whole frontend stack Like trying new things and
-          building great projects. I'm also a system administrator. I love to
-          learn and challenge myself.
-          <br /> <br />I believe hard work always pay off. You can connect with
-          me via social links.
+          {profileData.about[0]}
+          <br />
+          <br />
+          {profileData.about[1]}
+          <br />
+          <br />
+          {profileData.about[2]}
+          <ul>
+            {profileData.competencies.map((competency) => (
+              <li key={competency}>{competency}</li>
+            ))}
+          </ul>
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />
